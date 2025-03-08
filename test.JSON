@@ -1,0 +1,305 @@
+[
+ null,
+ {
+  "# Recréation du fichier JSON valide pour N8N": "json_corrected_content = \"\"\"{"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "  \"nodes\": ["
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"parameters\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"triggerTimes\": [{\"mode\": \"everyDay\", \"hour\": 8, \"minute\": 0}]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"name\": \"Cron\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"type\": \"n8n-nodes-base.cron\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"typeVersion\": 1,"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"position\": [200, 300]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"parameters\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"operation\": \"download\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"fileId\": \"YOUR_GOOGLE_DRIVE_FILE_ID\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"name\": \"Download CSV from Google Drive\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"type\": \"n8n-nodes-base.googleDrive\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"typeVersion\": 1,"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"position\": [400, 300]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"parameters\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"options\": {}"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"name\": \"CSV to JSON\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"type\": \"n8n-nodes-base.csvToJson\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"typeVersion\": 1,"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"position\": [600, 300]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"parameters\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"conditions\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          \"string\": [{"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"value1\": \"={{$json[\\\\\\\"Date Chargement\\\\\\\"]}}\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"operation\": \"equal\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"value2\": \"={{$today}}\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          }]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        }"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"name\": \"Filter Today’s Transports\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"type\": \"n8n-nodes-base.if\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"typeVersion\": 1,"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"position\": [800, 300]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"parameters\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"values\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          \"string\": [{"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"name\": \"message\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"value\": \"🚛 *Planning des transports du {{$today}}* 🚛\\\\n\\\\n📍 *Chargements prévus :*\\\\n{{JSON.stringify($items[0].json)}}\\\\n\\\\n📦 *Livraisons prévues :*\\\\n{{JSON.stringify($items[1].json)}}\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          }]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        }"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"name\": \"Format WhatsApp Message\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"type\": \"n8n-nodes-base.set\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"typeVersion\": 1,"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"position\": [1000, 300]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"parameters\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"requestMethod\": \"POST\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"url\": \"https:\/\/graph.facebook.com\/v15.0\/1283301679427718\/messages\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"options\": {},"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        \"bodyParametersUi\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          \"parameter\": [{"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"name\": \"messaging_product\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"value\": \"whatsapp\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          }, {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"name\": \"to\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"value\": \"+33623585358\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          }, {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"name\": \"type\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"value\": \"text\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          }, {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"name\": \"text\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "            \"value\": \"={ \\\\\\\"body\\\\\\\": {{$json[\\\\\\\"message\\\\\\\"]}} }\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "          }]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "        }"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      },"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"name\": \"Send WhatsApp Message\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"type\": \"n8n-nodes-base.httpRequest\","
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"typeVersion\": 1,"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "      \"position\": [1200, 300]"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    }"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "  ],"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "  \"connections\": {"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    \"Cron\": {\"main\": [[{\"node\": \"Download CSV from Google Drive\", \"type\": \"main\", \"index\": 0}]]},"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    \"Download CSV from Google Drive\": {\"main\": [[{\"node\": \"CSV to JSON\", \"type\": \"main\", \"index\": 0}]]},"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    \"CSV to JSON\": {\"main\": [[{\"node\": \"Filter Today’s Transports\", \"type\": \"main\", \"index\": 0}]]},"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    \"Filter Today’s Transports\": {\"main\": [[{\"node\": \"Format WhatsApp Message\", \"type\": \"main\", \"index\": 0}]]},"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    \"Format WhatsApp Message\": {\"main\": [[{\"node\": \"Send WhatsApp Message\", \"type\": \"main\", \"index\": 0}]]}"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "  }"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "}\"\"\""
+ },
+ null,
+ {
+  "# Recréation du fichier JSON valide pour N8N": "# Sauvegarde du fichier JSON"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "file_path_corrected_json = \"\/mnt\/data\/workflow_n8n_corrected.json\""
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "with open(file_path_corrected_json, \"w\") as file:"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "    file.write(json_corrected_content)"
+ },
+ null,
+ {
+  "# Recréation du fichier JSON valide pour N8N": "# Retourner le fichier pour téléchargement"
+ },
+ {
+  "# Recréation du fichier JSON valide pour N8N": "file_path_corrected_json"
+ }
+]
